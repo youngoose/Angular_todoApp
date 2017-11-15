@@ -1,0 +1,13 @@
+<div class="title">
+  <h1>My Day</h1>
+  <h2>Nov 14</h2>
+</div>
+<div>
+  <div *ngFor="let todo of todos" (click)="toggleTodo(todo)">
+    <input type="checkbox" [checked]="todo.done"> {{ todo.text }}
+  </div>
+</div>
+<div>
+  <input type="text" placeholder="add todos" [(ngModel)]="newText">
+  <button (click)="addTodo(newText)">Add</button>
+</div>
